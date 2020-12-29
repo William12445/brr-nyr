@@ -1,0 +1,800 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js adaptivetheme">
+  <head>
+                                          <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"dddcf39a1a",applicationID:"125884562"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-34548724-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["animals.sandiegozoo.org, devanimals.sandiegozoo.org, adminanimals.sandiegozoo.org, www.animals.sandiegozoo.org"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://animals.sandiegozoo.org/animals/african-penguin" />
+<link rel="shortlink" href="https://animals.sandiegozoo.org/node/281" />
+<link rel="revision" href="https://animals.sandiegozoo.org/animals/african-penguin" />
+
+    <title>African Penguin | San Diego Zoo Animals &amp; Plants</title>
+    <link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/ajax-progress.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/align.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/autocomplete-loading.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/fieldgroup.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/container-inline.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/clearfix.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/details.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/hidden.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/item-list.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/js.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/nowrap.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/position-container.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/progress.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/reset-appearance.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/resize.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/sticky-header.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-counter.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-counters.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-general-info.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tabledrag.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tree-child.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/views/views.module.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/filter/filter.caption.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/core.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/checkboxradio.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/controlgroup.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/resizable.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/button.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/dialog.css?q2s400" />
+<link rel="stylesheet" media="all" href="/modules/paragraphs/css/paragraphs.unpublished.css?q2s400" />
+<link rel="stylesheet" media="all" href="/modules/colorbox/styles/plain/colorbox_style.css?q2s400" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/theme.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/base.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/https%3A//fonts.googleapis.com/css?family=Raleway%3A400%0D%0Ahttps%3A//fonts.googleapis.com/css%3Ffamily%3DRaleway%3A400italic%0D%0Ahttps%3A//fonts.googleapis.com/css%3Ffamily%3DRaleway%3A700%0D%0Ahttps%3A//fonts.googleapis.com/css%3Ffamily%3DRaleway%3A700italic&amp;q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/generated/animals.layout.page.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/comments.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/contact-forms.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/search.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/taxonomy.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/responsive-tables.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/responsive-menus--horizontal.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/responsive-menus--offcanvas.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/responsive-menus.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/soundmanager2_mp3-player-button.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/scripts/mylist/css/mylist-player.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/color.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/generated/fonts.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/generated/title-styles.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/generated/mobile-blocks.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/generated/custom-css.css?q2s400" />
+<link rel="stylesheet" media="all" href="/themes/animals/styles/css/components/custom.css?q2s400" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/281","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"theme":"animals","libraries":"animals\/animals.layout.page,animals\/audioeye,animals\/base,animals\/color,animals\/comment,animals\/contact,animals\/custom_css,animals\/custom_css_file,animals\/fontfaceobserver,animals\/fonts,animals\/google_fonts,animals\/googlecse,animals\/mobile_blocks,animals\/mylist,animals\/responsive_menus,animals\/responsive_menus_horizontal,animals\/responsive_menus_offcanvas,animals\/responsive_tables,animals\/search,animals\/soundmanager2,animals\/taxonomy,animals\/title_styles,at_core\/at.breakpoints,at_core\/at.fastclick_initialize,at_core\/at.settings,colorbox\/colorbox,colorbox\/plain,filter\/caption,form_placeholder\/form_placeholder,google_analytics\/google_analytics,paragraphs\/drupal.paragraphs.unpublished,sharethis\/sharethis,sharethis\/sharethispickerexternalbuttons,sharethis\/sharethispickerexternalbuttonsws,statistics\/drupal.statistics,system\/base,views\/views.module","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true,"trackDomainMode":2,"trackCrossDomains":["animals.sandiegozoo.org, devanimals.sandiegozoo.org, adminanimals.sandiegozoo.org, www.animals.sandiegozoo.org"]},"animals":{"at_responsivemenus":{"bp":"all and (max-width: 75em)","default":"ms-horizontal","responsive":"ms-offcanvas","acd":{"acd_load":false}},"at_breakpoints":{"at_core_advanced_huge":{"breakpoint":"huge","mediaquery":"all and (min-width: 120.063em)"},"at_core_advanced_wide":{"breakpoint":"wide","mediaquery":"all and (min-width: 60.063em)"},"at_core_advanced_wide-isolate":{"breakpoint":"wide-isolate","mediaquery":"all and (min-width: 75em) and (max-width: 120em)"},"at_core_advanced_tablet":{"breakpoint":"tablet","mediaquery":"all and (max-width: 75em)"},"at_core_advanced_tablet-isolate":{"breakpoint":"tablet-isolate","mediaquery":"all and (min-width: 45.063em) and (max-width: 75em)"},"at_core_advanced_mobile-isolate":{"breakpoint":"mobile-isolate","mediaquery":"all and (max-width: 45em)"},"at_core_simple_wide":{"breakpoint":"wide","mediaquery":"all and (min-width: 60.063em)"},"at_core_simple_tablet-isolate":{"breakpoint":"tablet","mediaquery":"all and (min-width: 45.063em) and (max-width: 60em)"},"at_core_simple_mobile":{"breakpoint":"mobile","mediaquery":"all and (max-width: 45em)"}}},"statistics":{"data":{"nid":"281"},"url":"\/core\/modules\/statistics\/statistics.php"},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":false,"mobiledevicewidth":"480px"},"sharethis":{"publisher":"dr-303d9c36-c866-a49-813-fb87b0822764","version":"5x","doNotCopy":true,"hashAddressBar":false,"doNotHash":true},"form_placeholder":{"include":"#edit-title","exclude":"","required_indicator":"append"},"user":{"uid":0,"permissionsHash":"61228d18ead03ae841037770673b968e44a7f13a5626fbc0ef0a1354dd31cf57"}}</script>
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.8.1"></script>
+<script src="/core/misc/drupal.js?v=8.8.1"></script>
+<script src="/core/misc/drupal.init.js?v=8.8.1"></script>
+<script src="/themes/animals/scripts/googlecse/js/googlecse.js?v=1.0.x"></script>
+
+  </head>
+    <body class="layout-type--site-builder page-node-281 path-node path-animals-african-penguin node--type-animals site-name--san-diego-zoo-animals--plants theme-name--animals">
+    <a href="#highlighted" class="visually-hidden focusable skip-link">Skip to main content</a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="page js-layout">
+        <div class="l-pr page__row pr-navbar" id="navbar">
+    <div class="l-rw regions container pr-navbar__rw arc--1 hr--1" data-at-regions="">
+        <div  data-at-region="1" data-at-block-count="3" class="l-r region pr-navbar__navbar"><div id="block-animals-branding" class="l-bl block block-branding block-system block-system-branding-block">
+  <div class="block__inner block-branding__inner">
+
+    
+        
+
+                <div class="block__content block-branding__content site-branding">
+                  <a href="https://animals.sandiegozoo.org/" title="Home" itemprop="url" rel="home" class="site-branding__logo-link">
+            <img src="/sites/default/files/logo-animals-plants-header.png" alt="Home" itemprop="logo" class="site-branding__logo-img" />
+          </a>
+                          <span class="site-branding__text">
+                          <strong class="site-branding__name">
+                <a href="https://animals.sandiegozoo.org/" title="Home" itemprop="url" rel="home" class="site-branding__name-link">San Diego Zoo Animals &amp; Plants</a>
+              </strong>
+                                  </span>
+              </div>
+    
+  </div>
+</div>
+
+<nav id="block-animals-main-menu" class="l-bl rm-block rm-config-provider--system rm-derivative-plugin--main rm-id--block-animals-main-menu has-title js-hide" role="navigation" aria-labelledby="block-animals-main-menu-menu">
+  <div class="rm-block__inner">
+
+    
+    <div class="rm-toggle" id="block-animals-main-menu-menu">
+            <button href="#rm-content" class="rm-toggle__link un-button" role='button' aria-controls="rm-content" aria-expanded="false" aria-lable="Main menu">
+        <svg class="rm-toggle__icon" viewBox="0 0 1792 1792" preserveAspectRatio="xMinYMid meet">
+          <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"/>
+        </svg>
+        <span class="rm-toggle__label">Main menu</span>
+      </button>
+    </div>
+    
+
+              <div class="rm-block__content" id="rm-content">
+		<div class="mobile-search">
+		<p></p>
+		</div>
+		
+                    <ul class="menu odd menu-level-1 menu-name--main">
+                          <li class="menu__item menu-title-home menu-plugin-id--standardfront-page"><a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a></li>                      <li class="menu__item menu__item--expanded menu-title-animals menu-plugin-id--menu-link-contenta329f6d9-7d1d-494a-838f-822934e69c1f"><a href="/animals" data-drupal-link-system-path="node/296">Animals</a><ul class="menu even menu-level-2"><li class="menu__item menu-title-amphibians menu-plugin-id--menu-link-content6d4b834d-185b-451f-a75d-a959c281b4c1"><a href="/animals/amphibians" data-drupal-link-system-path="node/28">Amphibians</a></li><li class="menu__item menu-title-arthropods menu-plugin-id--menu-link-contenta18f393b-5d17-4479-88ee-50f05d75ba5c"><a href="/animals/arthropods" data-drupal-link-system-path="node/30">Arthropods</a></li><li class="menu__item menu-title-birds menu-plugin-id--menu-link-contentb5f9f43c-686c-4323-9d14-8deb81d66763"><a href="/animals/birds" data-drupal-link-system-path="node/29">Birds</a></li><li class="menu__item menu-title-fish menu-plugin-id--menu-link-contentc557549c-69ef-4664-aa97-dbeda8432596"><a href="/animals/fish" data-drupal-link-system-path="node/313">Fish</a></li><li class="menu__item menu-title-mammals menu-plugin-id--menu-link-contentaba47004-90a8-4b0b-bb2d-81518af27e35"><a href="/animals/mammals" data-drupal-link-system-path="node/31">Mammals</a></li><li class="menu__item menu-title-reptiles menu-plugin-id--menu-link-content9ee17fa6-3490-4571-b02c-fb7ed560196e"><a href="/animals/reptiles" data-drupal-link-system-path="node/32">Reptiles</a></li></ul></li>                      <li class="menu__item menu-title-plants menu-plugin-id--menu-link-contente11d209b-f8fa-427b-998e-17e940fc06b8"><a href="/plants" data-drupal-link-system-path="node/307">Plants</a></li>                      <li class="menu__item menu-title-habitats menu-plugin-id--menu-link-content2180d03b-1f08-4254-b1d9-d6897c9a217a"><a href="/habitats" data-drupal-link-system-path="node/309">Habitats</a></li>                      <li class="menu__item menu-title-regions menu-plugin-id--menu-link-contente817056e-6965-4bf0-9cad-ae37598c258f"><a href="/regions" data-drupal-link-system-path="node/310">Regions</a></li>                      <li class="menu__item menu-title-zoonooz menu-plugin-id--menu-link-content9ce217d0-1b96-497b-baf7-d9af3f80ca17"><a href="http://zoonooz.sandiegozoo.org">ZOONOOZ</a></li>                      <li class="menu__item menu-title-live-cams menu-plugin-id--menu-link-content7efe68a3-7cb2-4a9e-a3bb-554b06b105d3"><a href="/live-cams" data-drupal-link-system-path="node/312">Live Cams</a></li>                      <li class="menu__item menu-title-videos menu-plugin-id--menu-link-content413346ed-6b65-44c9-b6b6-ded9dc88e262"><a href="/videos" data-drupal-link-system-path="node/311">Videos</a></li>          </ul>
+  
+
+
+      </div>
+    
+  </div>
+</nav>
+<div class="search-block-form submit-is-hidden has-placeholder l-bl block block-search block-config-provider--search block-plugin-id--search-form-block block-id--block-searchform" data-drupal-selector="search-block-form" id="block-searchform" role="search" aria-labelledby="block-searchform-menu">
+  <div class="block__inner block-search__inner">
+
+                  
+    
+      <h2 class="visually-hidden block__title block-search__title" id="block-searchform-menu"><span>Search form</span></h2>
+    
+
+          <div class="block__content block-search__content">
+        <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-block-form__form">
+  <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." placeholder="SEARCH" class="has-attribute-placeholder form-search" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="" maxlength="128" />
+
+        </div>
+<div class="visually-hidden form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"><input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" />
+</div>
+
+</form>
+
+      </div>
+    
+  </div>
+</div>
+</div>
+
+    </div>
+  </div>
+      <div class="l-pr page__row pr-highlighted" id="highlighted">
+    <div class="l-rw regions container pr-highlighted__rw arc--1 hr--1" data-at-regions="">
+        <div  data-at-region="1" data-at-block-count="2" class="l-r region pr-highlighted__highlighted"><div id="block-contentfield-3" class="l-bl block block-config-provider--fieldblock block-derivative-plugin--node block-id--block-contentfield-3">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+          <div class="field field-node--field-hero-image field-name-field-hero-image field-type-image field-label-hidden has-single">
+              <figure class="field-type-image__figure image-count-1">
+          <div class="field-type-image__item">
+          <img src="/sites/default/files/2016-10/animals_hero_penguin_02_1.jpg" width="1920" height="1080" alt="African penguin walking across beach in South Africa." typeof="foaf:Image" />
+
+
+              </div>
+    </figure>
+  </div>
+
+      </div>
+    
+  </div>
+</div>
+<div data-drupal-messages-fallback class="hidden"></div>
+</div>
+
+    </div>
+  </div>
+          <div class="l-pr page__row pr-main regions-multiple" id="main-content">
+    <div class="l-rw regions container pr-main__rw arc--2 hr--1-3" data-at-regions="">
+        <div  data-at-region="1" data-at-block-count="5" class="l-r region pr-main__content"><div id="block-conservationstatus" class="l-bl block block-config-provider--ctools-block block-derivative-plugin--nodefield-conservation-status block-id--block-conservationstatus">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+        <div class="field field-node--field-conservation-status field-name-field-conservation-status field-type-entity-reference field-label-hidden">
+    <div class="field__items">
+                <div class="field__item">
+        <span class="field__item-wrapper"><div about="/conservation-status/endangered" id="taxonomy-term-826" class="taxonomy-term vocabulary-conservation-status">
+  
+      <div class="taxonomy-term"><div class="field field-taxonomy-term--name field-name-name field-type-string field-label-hidden">
+    <div class="field__items">
+          <div class="field__item">Endangered</div>
+      </div>
+</div>
+</div>
+    
+  <div class="content">
+    
+  </div>
+</div>
+</span>
+      </div>
+      </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+<article data-history-node-id="281" role="article" about="/animals/african-penguin" class="node node--id-281 node--type-animals node--view-mode-full">
+  <div class="node__container">
+
+    <header class="node__header">
+      
+      
+                        <h1 class="node__title"><span class="field field--name-title field--type-string field--label-hidden">African Penguin</span>
+</h1>
+                    
+
+          </header>
+
+    <div class="node__content">
+      <div class="clearfix text-formatted field field-node--field-scientific-name field-name-field-scientific-name field-type-text field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><em>Spheniscus demersus</em></div>
+      </div>
+</div>
+<div class="sharethis-wrapper"><span st_url="https://animals.sandiegozoo.org/animals/african-penguin" st_title="African Penguin" class="st_facebook_custom" displayText="facebook"></span>
+<span st_url="https://animals.sandiegozoo.org/animals/african-penguin" st_title="African Penguin" class="st_twitter_custom" displayText="twitter"></span>
+<span st_url="https://animals.sandiegozoo.org/animals/african-penguin" st_title="African Penguin" class="st_pinterest_custom" displayText="pinterest"></span>
+<span st_url="https://animals.sandiegozoo.org/animals/african-penguin" st_title="African Penguin" class="st_fblike_custom" displayText="fblike"></span>
+</div><div class="clearfix text-formatted field field-node--field-classifications field-name-field-classifications field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><ul><li><strong>Class:</strong> Aves (Birds)</li>
+	<li><strong>Order: </strong>Sphenisciformes</li>
+	<li><strong>Family: </strong>Sphenisciformes</li>
+	<li><strong>Genus:</strong> <em>Spheniscus</em></li>
+	<li><strong>Species: </strong><em>demersus</em></li>
+</ul></div>
+      </div>
+</div>
+<div class="field field-node--field-animal-collage field-name-field-animal-collage field-type-entity-reference-revisions field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><div class="paragraph paragraph--type-photo-collage-1col paragraph--view-mode-default">
+    <div class="field field-paragraph--field-photo-collage-1 field-name-field-photo-collage-1 field-type-image field-label-hidden has-single">
+              <figure class="field-type-image__figure image-count-1">
+          <div class="field-type-image__item">
+        <a href="https://animals.sandiegozoo.org/sites/default/files/2016-10/penguin_01.jpg" title="African penguins are fast swimmers, allowing them to catch a variety of prey from the sea, including sardines, anchovies, squid, and crustaceans." data-colorbox-gallery="gallery-photo_collage_1col-1582-PBcGM5AHECI" class="colorbox" data-cbox-img-attrs="{&quot;alt&quot;:&quot;African penguins are fast swimmers, allowing them to catch a variety of prey from the sea, including sardines, anchovies, squid, and crustaceans.&quot;}" alt="test"><img src="/sites/default/files/styles/image_grid_full_width/public/2016-10/penguin_01.jpg?itok=pWGI5x2e" width="740" height="494" alt="African penguins are fast swimmers, allowing them to catch a variety of prey from the sea, including sardines, anchovies, squid, and crustaceans." typeof="foaf:Image" class="image-style-image-grid-full-width" />
+
+</a>
+
+              </div>
+    </figure>
+  </div>
+
+</div>
+</div>
+          <div class="field__item"><div class="paragraph paragraph--type-photo-collage-2col paragraph--view-mode-default">
+    <div class="field field-paragraph--field-photo-collage-2 field-name-field-photo-collage-2 field-type-image field-label-hidden has-single">
+              <figure class="field-type-image__figure image-count-1">
+          <div class="field-type-image__item">
+        <a href="https://animals.sandiegozoo.org/sites/default/files/2016-10/penguin02.jpg" title="One of the African penguin&#039;s most distinctive features is a small pink gland above each eye, which helps them cope with high temperatures in South Africa. " data-colorbox-gallery="gallery-photo_collage_2col-1583-PBcGM5AHECI" class="colorbox" data-cbox-img-attrs="{&quot;alt&quot;:&quot;One of the African penguin&#039;s most distinctive features is a small pink gland above each eye, which helps them cope with high temperatures in South Africa. &quot;}" alt="test"><img src="/sites/default/files/styles/image_grid_half_width/public/2016-10/penguin02.jpg?itok=2t59U0rE" width="370" height="370" alt="One of the African penguin&#039;s most distinctive features is a small pink gland above each eye, which helps them cope with high temperatures in South Africa. " typeof="foaf:Image" class="image-style-image-grid-half-width" />
+
+</a>
+
+              </div>
+    </figure>
+  </div>
+
+</div>
+</div>
+          <div class="field__item"><div class="paragraph paragraph--type-photo-collage-2col paragraph--view-mode-default">
+    <div class="field field-paragraph--field-photo-collage-2 field-name-field-photo-collage-2 field-type-image field-label-hidden has-single">
+              <figure class="field-type-image__figure image-count-1">
+          <div class="field-type-image__item">
+        <a href="https://animals.sandiegozoo.org/sites/default/files/2016-10/penguin_03.jpg" title="When African penguin chicks hatch, the parents share the responsibility of keeping them warm and fed constantly for the first 30 days." data-colorbox-gallery="gallery-photo_collage_2col-1584-PBcGM5AHECI" class="colorbox" data-cbox-img-attrs="{&quot;alt&quot;:&quot;When African penguin chicks hatch, the parents share the responsibility of keeping them warm and fed constantly for the first 30 days.&quot;}" alt="test"><img src="/sites/default/files/styles/image_grid_half_width/public/2016-10/penguin_03.jpg?itok=eTmytynz" width="370" height="370" alt="When African penguin chicks hatch, the parents share the responsibility of keeping them warm and fed constantly for the first 30 days." typeof="foaf:Image" class="image-style-image-grid-half-width" />
+
+</a>
+
+              </div>
+    </figure>
+  </div>
+
+</div>
+</div>
+      </div>
+</div>
+<div class="field field-node--field-teal-paragraph field-name-field-teal-paragraph field-type-entity-reference-revisions field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><div class="paragraph paragraph--type-paragraph-green paragraph--view-mode-default">
+  <div class="clearfix text-formatted field field-paragraph--field-green-box-headline field-name-field-green-box-headline field-type-text field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><h2>ABOUT</h2></div>
+      </div>
+</div>
+<div class="clearfix text-formatted field field-paragraph--field-teal-paragraph field-name-field-teal-paragraph field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><p><span class="lead-in-text">Black and white and cute all over.</span> While the African penguin may not be found in freezing temperatures, they are covered in an array of black, white, and gray dense, waterproof feathers that keep them dry and warm in the cold waters off the African coast. They also have a number of dot-like markings flecked across their white chests. These flecks help to individualize each penguin, as each penguin's feather pattern is as individual as a human's fingerprints. The animal has a distinct, sharply pointed beak and black feet. The African penguin is one of the smallest species. Males are generally slightly larger than their female counterparts.</p>
+<figure role="group" class="caption caption-img"><img alt="African penguin crouching down and braying." data-entity-type="file" data-entity-uuid="372b6241-10a8-4560-ae7e-efc34ddb12c0" src="/sites/default/files/inline-images/penguin_braying.jpg" /><figcaption>African penguins are also widely known as "jackass" penguins, for their donkey-like bray.</figcaption></figure><p><span class="lead-in-text">African penguins communicate </span>with one another through vocalizations and body language.<span class="lead-in-text"> </span>Each individual has its own unique vocalization that distinguishes it from the others. They use three different types of calls: a bray, used to attract a mate; the yell, used to defend their territory; and the haw, used by mates to locate each other when one is on land and one is at sea. When a penguin is feeling aggressive, it communicates through body language. It puffs out its chest, holds its wings back, its beak forward, and bobs its head side to side.</p>
+
+<p><span class="lead-in-text">One of its most distinctive features</span> is a small pink gland above each eye,<span class="lead-in-text"> </span>which helps them cope with high temperatures in South Africa. The hotter the penguin gets, the more blood is sent to these glands where it is cooled by the surrounding air, and keeps the animal cooler. The glands have a pinker appearance the hotter it gets.</p>
+
+<p><span style="border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font-style: normal; font-variant-caps: normal; font-weight: bold; font-size: 11px; line-height: 20px; font-family: 'Helvetica Neue', Helvetica, sans-serif; color: rgb(255, 255, 255); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==); background-color: rgb(189, 8, 28); background-size: 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; -webkit-font-smoothing: antialiased; background-position: 3px 50%; background-repeat: no-repeat no-repeat;">Save</span><span style="border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font-style: normal; font-variant-caps: normal; font-weight: bold; font-size: 11px; line-height: 20px; font-family: 'Helvetica Neue', Helvetica, sans-serif; color: rgb(255, 255, 255); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==); background-color: rgb(189, 8, 28); background-size: 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; -webkit-font-smoothing: antialiased; background-position: 3px 50%; background-repeat: no-repeat no-repeat;">Save</span></p>
+
+<p><span style="border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font-style: normal; font-variant-caps: normal; font-weight: bold; font-size: 11px; line-height: 20px; font-family: 'Helvetica Neue', Helvetica, sans-serif; color: rgb(255, 255, 255); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==); background-color: rgb(189, 8, 28); background-size: 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; -webkit-font-smoothing: antialiased; background-position: 3px 50%; background-repeat: no-repeat no-repeat;">Save</span><span style="border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font-style: normal; font-variant-caps: normal; font-weight: bold; font-size: 11px; line-height: 20px; font-family: 'Helvetica Neue', Helvetica, sans-serif; color: rgb(255, 255, 255); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==); background-color: rgb(189, 8, 28); background-size: 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; -webkit-font-smoothing: antialiased; background-position: 3px 50%; background-repeat: no-repeat no-repeat;">Save</span></p>
+
+<p><span style="border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font-style: normal; font-variant-caps: normal; font-weight: bold; font-size: 11px; line-height: 20px; font-family: 'Helvetica Neue', Helvetica, sans-serif; color: rgb(255, 255, 255); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==); background-color: rgb(189, 8, 28); background-size: 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; -webkit-font-smoothing: antialiased; background-position: 3px 50%; background-repeat: no-repeat no-repeat;">Save</span><span style="border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font-style: normal; font-variant-caps: normal; font-weight: bold; font-size: 11px; line-height: 20px; font-family: 'Helvetica Neue', Helvetica, sans-serif; color: rgb(255, 255, 255); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==); background-color: rgb(189, 8, 28); background-size: 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; -webkit-font-smoothing: antialiased; background-position: 3px 50%; background-repeat: no-repeat no-repeat;">Save</span></p>
+</div>
+      </div>
+</div>
+
+</div>
+</div>
+          <div class="field__item"><div class="paragraph paragraph--type-paragraph-orange paragraph--view-mode-default">
+  <div class="clearfix text-formatted field field-paragraph--field-orange-box-headline field-name-field-orange-box-headline field-type-text field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><h2>HABITAT AND DIET</h2></div>
+      </div>
+</div>
+<div class="clearfix text-formatted field field-paragraph--field-teal-paragraph field-name-field-teal-paragraph field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><figure role="group" class="caption caption-img"><img alt="A group of African penguins stand on a rocky, sandy coast in the foreground, while hundreds of penguins stand on a large boulder in the distance." data-entity-type="file" data-entity-uuid="f70d7f41-1488-46d4-babe-e47711e05668" src="/sites/default/files/inline-images/penguins_colony.jpg" /><figcaption>African penguins can be found in large colonies along the southwestern rocky coast of Africa from Namibia to Port Elizabeth, and many of the surrounding islands. </figcaption></figure><p><span class="lead-in-text">African penguins can be found in large colonies </span>along the southwestern rocky coast of Africa from Namibia to Port Elizabeth, and many of the surrounding islands. The largest colony is located on Dyer Island. The birds build nests out of their own excrement, called guano, under bushes or rocks. This shelter provides them protection from the harsh sun during the hot African days.</p>
+
+<p><span class="lead-in-text">Being fast swimmers</span> allows them to catch a variety of prey from the sea, including sardines and anchovies, as well as squid and crustaceans. These hearty little penguins can hold their breath over 2 minutes and dive over 400 feet deep! A penguin may eat up to 1 pound of food or 14 percent of its body weight per day. At the Zoo, our penguins enjoy sardines, capelin, and night smelt. They swallow their fish whole and prefer to be hand fed!</p>
+</div>
+      </div>
+</div>
+
+</div>
+</div>
+          <div class="field__item"><div class="paragraph paragraph--type-paragraph-red paragraph--view-mode-default">
+  <div class="clearfix text-formatted field field-paragraph--field-red-box-headline field-name-field-red-box-headline field-type-text field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><h2>FAMILY LIFE</h2>
+</div>
+      </div>
+</div>
+<div class="clearfix text-formatted field field-paragraph--field-teal-paragraph field-name-field-teal-paragraph field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><p><span class="lead-in-text">African penguins<strong> </strong>reach sexual maturity </span>around four years of age.<span class="lead-in-text"> </span>At this time, the male will court the female with a donkey-like bray. Who can resist? (This call also earned them the nickname jackass penguin.) Once the male is accepted by the female, the pair will continue to bond for the rest of the season—and they sometimes remain bonded for future mating seasons, but not always. The female digs a burrow under a bush or a rock where she lays two eggs. Both parents take turns incubating the eggs for up to 40 days. Once the chicks hatch, the parents share the responsibility of keeping the chicks warm and fed constantly for the first 30 days. Once they reach a month old, the chicks are left for short periods with other chicks while their parents hunt for food. The chicks huddle together in large "nursery groups" to keep warm and help protect each other from predators. The juveniles leave the colony when they are around four months of age and have developed their juvenile plumage.</p>
+</div>
+      </div>
+</div>
+
+</div>
+</div>
+          <div class="field__item"><div class="paragraph paragraph--type-paragraph-teal paragraph--view-mode-default">
+  <div class="clearfix text-formatted field field-paragraph--field-teal-box-headline field-name-field-teal-box-headline field-type-text field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><h2>AT THE ZOO</h2>
+</div>
+      </div>
+</div>
+<div class="clearfix text-formatted field field-paragraph--field-teal-paragraph field-name-field-teal-paragraph field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><p><span class="lead-in-text">Our flock of African penguins</span>  can be seen in the big, new Dan and Vi McKinney Penguin Habitat at Cape Fynbos in the San Diego Zoo's Conrad Prebys Africa Rocks. The spacious Penguin Beach features a cobblestone beach, nesting areas, and rockwork that mimics the granite boulders found at Boulders Beach in South Africa—along with a 200,000-gallon pool with depths up to 13 feet, and underwater viewing. Cape Fynbos was the first Africa Rocks habitat to open to the public—on July 1, 2017.</p>
+</div>
+      </div>
+</div>
+
+</div>
+</div>
+          <div class="field__item"><div class="paragraph paragraph--type-paragraph-yellow paragraph--view-mode-default">
+  <div class="clearfix text-formatted field field-paragraph--field-yellow-box-headline field-name-field-yellow-box-headline field-type-text field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><h2>CONSERVATION</h2></div>
+      </div>
+</div>
+<div class="clearfix text-formatted field field-paragraph--field-teal-paragraph field-name-field-teal-paragraph field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><p><span class="lead-in-text">As one of the most endangered types of penguin,</span><strong> </strong>these little birds need your help! Their numbers have declined by 60 percent in the last 28 years. The African penguins at the Zoo are just the beginning of a large flock that we hope to have over the next couple of years, and start breeding this species. It is important for people to learn about this endearing species.</p>
+</div>
+      </div>
+</div>
+
+</div>
+</div>
+      </div>
+</div>
+
+    </div>
+
+  
+</article>
+</div>
+
+      
+        <div  data-at-region="3" data-at-block-count="3" class="l-r region pr-main__sidebar-second"><div id="block-blocktexttest" class="l-bl block block-config-provider--block-content block-derivative-plugin--ec44ce70-7116-4f88-8399-4792b3d7456f block-id--block-blocktexttest">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+        <div class="clearfix text-formatted field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><a href="http://endextinction.org"><img alt="Save Wildlife. Help us keep this and other species from disappearing forever." data-entity-type="file" data-entity-uuid="d7d10207-3139-4520-a197-bdce8f93a308" src="/sites/default/files/inline-images/sidebar-ad-save-wildlife_0.jpg" class="align-center" /></a></div>
+      </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+<div id="block-sidebarcontent" class="l-bl block block-config-provider--ctools-block block-derivative-plugin--nodefield-sidebar-text block-id--block-sidebarcontent">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+        <div class="field field-node--field-sidebar-text field-name-field-sidebar-text field-type-entity-reference-revisions field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><div class="paragraph paragraph--type-sidebar-image paragraph--view-mode-default">
+  <div class="clearfix text-formatted field field-paragraph--field-body field-name-field-body field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><a href="https://zoo.sandiegozoo.org/cams/penguin-cam"><img alt="Penguin Cam: San Diego Zoo's African Penguins Live. Watch Now." data-entity-type="file" data-entity-uuid="65f926ca-956d-4f02-b1e7-f53cc3a5f4eb" src="/sites/default/files/inline-images/penguin_cam.jpg" class="align-center" /></a></div>
+      </div>
+</div>
+
+</div>
+</div>
+          <div class="field__item"><div class="paragraph paragraph--type-sidebar-text paragraph--view-mode-default">
+  <div class="clearfix text-formatted field field-paragraph--field-teal-paragraph field-name-field-teal-paragraph field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><h3>LIFE SPAN</h3>
+
+<p>10 to 15 years</p>
+
+<h3>YOUNG</h3>
+
+<p>Number of eggs laid: 2 per clutch</p>
+
+<p>Incubation period: 40 days</p>
+
+<p>Age at fledge: 4 months</p>
+
+<p>Age of maturity: 3 to 4 years</p>
+
+<h3>SIZE</h3>
+
+<p>Height: 24 to 27 inches (61 to 69 centimeters)</p>
+
+<p>Weight: 4.4 to 11 pounds (2 to 5 kilograms)</p>
+</div>
+      </div>
+</div>
+
+</div>
+</div>
+          <div class="field__item"><div class="paragraph paragraph--type-sidebar-text paragraph--view-mode-default">
+  <div class="clearfix text-formatted field field-paragraph--field-teal-paragraph field-name-field-teal-paragraph field-type-text-long field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><h3>FUN FACTS</h3>
+
+<p>African penguins are believed to be one of the first penguin species to be discovered by humans.</p>
+
+<p>These hardy little penguins can hold their breath over 2 minutes and dive over 400 feet deep!</p>
+</div>
+      </div>
+</div>
+
+</div>
+</div>
+      </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+<div class="views-element-container l-bl block block-config-provider--views block-derivative-plugin--sidebar-ads-block-1 block-id--block-views-block-sidebar-ads-block-1" id="block-views-block-sidebar-ads-block-1">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+        <div><div class="view view-sidebar-ads view-id-sidebar_ads view-display-id-block_1 js-view-dom-id-e32636d1a6c8ed7bb05c24df6e60110136289c9c90468c69893c16406e75999b">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-nothing"><span class="field-content"><a href="http://africarocks.sandiegozoo.org">  <img src="/sites/default/files/2017-12/AR17_Banner_Ad_300x250.jpg" width="300" height="250" alt="Africa Rocks, Now Open. San Diego Zoo." typeof="Image" />
+
+</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+</div>
+
+    </div>
+  </div>
+      <div class="l-pr page__row pr-content-suffix" id="content-suffix">
+    <div class="l-rw regions container pr-content-suffix__rw arc--1 hr--1" data-at-regions="">
+        <div  data-at-region="1" data-at-block-count="2" class="l-r region pr-content-suffix__content-suffix"><div class="views-element-container l-bl block block-config-provider--views block-derivative-plugin--animals-and-plants-block-1 block-id--block-views-block-animals-and-plants-block-1 has-title" id="block-views-block-animals-and-plants-block-1">
+  <div class="block__inner">
+
+    
+          <h2 id="" class="block__title"><span>DISCOVER WILDLIFE</span></h2>
+        
+
+          <div class="block__content">
+        <div><div class="view view-animals-and-plants view-id-animals_and_plants view-display-id-block_1 js-view-dom-id-74109927360e20382b00fc841375ff95f062380ef7898379fa00ea7dea613b3b">
+  
+    
+      <div class="view-header">
+      <h3 class="discover-sub-head">More Animals & Plants from San Diego Zoo and San Diego Zoo Safari Park</h3>
+    </div>
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-field-hero-image"><div class="field-content">  <a href="/animals/lion"><img src="/sites/default/files/styles/disscover_480_thumbnail/public/2016-09/animals_hero_lions_0.jpg?h=d1cb525d&amp;itok=_4APfOck" width="480" height="360" alt="Lion brothers nuzzle one another on the grasslands of Masai Mara, Kenya" typeof="foaf:Image" class="image-style-disscover-480-thumbnail" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/lion" hreflang="und">Lion</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero-image"><div class="field-content">  <a href="/animals/gila-monster"><img src="/sites/default/files/styles/disscover_480_thumbnail/public/2016-11/animals_hero_gila_monster_0.jpg?h=d1cb525d&amp;itok=2d7CKElQ" width="480" height="360" alt="Gila monster crawling along rocky brown dirt" typeof="foaf:Image" class="image-style-disscover-480-thumbnail" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/gila-monster" hreflang="und">Gila Monster</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero-image"><div class="field-content">  <a href="/animals/andean-condor"><img src="/sites/default/files/styles/disscover_480_thumbnail/public/2016-09/animals_hero_andeancondor.jpg?h=d1cb525d&amp;itok=Rz_1V_-v" width="480" height="360" alt="Andean Condor sitting at Mirador Cruz del Condor" typeof="foaf:Image" class="image-style-disscover-480-thumbnail" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/andean-condor" hreflang="und">Andean Condor</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero-image"><div class="field-content">  <a href="/plants/new-zealand-christmas-tree"><img src="/sites/default/files/styles/disscover_480_thumbnail/public/2016-10/plants_newzealand_christmas_tree.jpg?h=d1cb525d&amp;itok=bbARM-6k" width="480" height="360" alt="New Zealand Christmas Tree flowers" typeof="foaf:Image" class="image-style-disscover-480-thumbnail" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/plants/new-zealand-christmas-tree" hreflang="en">New Zealand Christmas Tree</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero-image"><div class="field-content">  <a href="/animals/crocodilian"><img src="/sites/default/files/styles/disscover_480_thumbnail/public/2016-10/animals_hero_crocodilian_0.jpg?h=6df1fe44&amp;itok=W532IMcR" width="480" height="360" alt="A Chinese dwarf crocodile floating half-submerged in water" typeof="foaf:Image" class="image-style-disscover-480-thumbnail" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/crocodilian" hreflang="und">Crocodilian</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero-image"><div class="field-content">  <a href="/animals/babirusa"><img src="/sites/default/files/styles/disscover_480_thumbnail/public/2017-02/animals_hero_barbirusa.jpg?h=9bffc0d4&amp;itok=vcFjLqaj" width="480" height="360" alt="Barbirusa and two piglets lay near a mud pit" typeof="foaf:Image" class="image-style-disscover-480-thumbnail" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/babirusa" hreflang="en">Babirusa</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero-image"><div class="field-content">  <a href="/animals/date-palm"><img src="/sites/default/files/styles/disscover_480_thumbnail/public/2018-06/plants_hero_date_palm.jpg?h=d1cb525d&amp;itok=YWdcyoIt" width="480" height="360" alt="Date palm heavy with bright orange fruit" typeof="foaf:Image" class="image-style-disscover-480-thumbnail" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/date-palm" hreflang="en">Date Palm</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-hero-image"><div class="field-content">  <a href="/animals/red-panda"><img src="/sites/default/files/styles/disscover_480_thumbnail/public/2016-09/animals_hero_redpanda.jpg?h=d1cb525d&amp;itok=YAHOyzFq" width="480" height="360" alt="Red panda in tree" typeof="foaf:Image" class="image-style-disscover-480-thumbnail" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/animals/red-panda" hreflang="und">Red Panda</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+<div class="views-element-container l-bl block block-config-provider--views block-derivative-plugin--zoonooz-story-link-block-1 block-id--block-views-block-zoonooz-story-link-block-1" id="block-views-block-zoonooz-story-link-block-1">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+        <div><div class="view view-zoonooz-story-link view-id-zoonooz_story_link view-display-id-block_1 js-view-dom-id-19570fc89695e2e04a6ed5dbd2eb20d5e0fa9c804bf5154a98b7bc9ebf1f91c4">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-field-zoonooz-story-link"><div class="field-content"><div class="zoonooz-container">
+<div class="zoonooz-image">
+  <img src="/sites/default/files/2019-05/PenguinBeach_ZN.jpg" width="1920" height="1075" alt="African penguins at Conrad Prebys Africa Rocks" typeof="Image" />
+
+
+</div>
+<div class="zoonooz-text">
+<div class="zoonooz-text-container">
+<h2>Who's Who at Penguin Beach?</h2>
+<div class="zoonooz-rule"></div>
+<p>Meet the residents of Africa Rocks' dynamic Cape Fynbos penguin colony...</p>
+<div class="zoonooz-story-link">
+<a href="https://zoonooz.sandiegozoo.org/zoonooz/whos-who/">https://zoonooz.sandiegozoo.org/zoonooz/whos-who/</a>
+</div>
+</div>
+</div>
+</div></div></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+</div>
+
+    </div>
+  </div>
+          <footer class="l-pr page__row pr-footer" role="contentinfo" id="footer">
+    <div class="l-rw regions container pr-footer__rw arc--1 hr--1" data-at-regions="">
+        <div  data-at-region="1" data-at-block-count="4" class="l-r region pr-footer__footer"><div id="block-footerlogorule" class="l-bl block block-config-provider--block-content block-derivative-plugin--_96abcf8-8592-4c20-bec0-9feb3ec08cb7 block-id--block-footerlogorule">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+        <div class="clearfix text-formatted field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><a href="/"><img src="/themes/animals/images/footer-animals-logo.png" alt="San Diego Zoo Global Animals and Plants" class="footer-logo"></a>
+
+</div>
+      </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<nav id="block-ourfamilyofsites" class="l-bl block block-menu block-config-provider--system block-derivative-plugin--our-family-of-sites- block-id--block-ourfamilyofsites has-title" role="navigation" aria-labelledby="block-ourfamilyofsites-menu">
+  <div class="block__inner block-menu__inner">
+
+        
+    
+    <h2 class="block__title block-menu__title" id="block-ourfamilyofsites-menu"><span>Our Family of Sites:</span></h2>
+    
+
+              <div class="block__content block-menu__content">
+        
+                    <ul class="menu odd menu-level-1 menu-name--our-family-of-sites-">
+                          <li class="menu__item menu-title-san-diego-zoo menu-plugin-id--menu-link-content61b135df-e985-4af6-83d5-2dfa8554d348"><a href="http://zoo.sandiegozoo.org" title="San Diego Zoo website">San Diego Zoo</a></li>                      <li class="menu__item menu-title-safari-park menu-plugin-id--menu-link-content774d7cb6-fa72-4327-9c26-5ffa7d832e87"><a href="http://sdzsafaripark.org" title="Safari Park website">Safari Park</a></li>                      <li class="menu__item menu-title-institute menu-plugin-id--menu-link-contentb6970f89-2dd0-475d-b70f-6dfe0a4ea72a"><a href="http://institute.sandiegozoo.org" title="San Diego Zoo Global Institute for Conservation Research">Institute</a></li>                      <li class="menu__item menu-title-wildlife-conservancy menu-plugin-id--menu-link-contentdd85a622-0420-4b7c-9e00-dcd6d18d354a"><a href="http://endextinction.org" title="San Diego Zoo Global Wildlife Conservancy website">Wildlife Conservancy</a></li>                      <li class="menu__item menu-title-kids menu-plugin-id--menu-link-content840c4c48-e487-4bf4-9016-57532c18ecf6"><a href="http://kids.sandiegozoo.org" title="San Diego Zoo Kids website">Kids</a></li>                      <li class="menu__item menu-title-sdz-global menu-plugin-id--menu-link-content60d31daf-c2a5-43e2-8c5e-e4303c735952"><a href="http://sandiegozooglobal.org" title="San Diego Zoo Global website">SDZ Global</a></li>                      <li class="menu__item menu-title-zoonooz menu-plugin-id--menu-link-contentbc8db068-f472-494c-9731-9b63ce7764c0"><a href="http://zoonooz.sandiegozoo.org" title="San Diego Zoo Global ZOONOOZ website">ZOONOOZ</a></li>          </ul>
+  
+
+
+      </div>
+    
+  </div>
+</nav>
+<div id="block-footerrule" class="l-bl block block-config-provider--block-content block-derivative-plugin--_765e1a5-2286-4db4-8c64-3fd719b1be02 block-id--block-footerrule">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+        <div class="clearfix text-formatted field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><img src="/themes/animals/images/footer-rule.jpg" alt="" class="footer-rule"></div>
+      </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+<div id="block-copyrightforfooter" class="l-bl block block-config-provider--block-content block-derivative-plugin--_7dbc714-c620-4077-8a50-1dfc4cef531f block-id--block-copyrightforfooter">
+  <div class="block__inner">
+
+    
+        
+
+          <div class="block__content">
+        <div class="clearfix text-formatted field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field__items">
+          <div class="field__item"><div class="footer-copyright"><script type="text/javascript">
+
+var mydate= new Date()
+var theyear=mydate.getFullYear()
+
+document.write("&copy; ")
+document.write(theyear)
+document.write("&nbsp;San Diego&nbsp;Zoo&nbsp;Global")
+</script>
+</div>
+<div class="footer-links">
+<a href="http://zoo.sandiegozoo.org/content/contact-us">Contact&nbsp;Us</a>
+<a href="http://zoo.sandiegozoo.org/content/privacy-policy">Privacy&nbsp;Policy</a>
+<a href="http://zoo.sandiegozoo.org/content/terms-use">Terms&nbsp;of&nbsp;Use</a>
+<a href="http://zoo.sandiegozoo.org/state-disclosures">State&nbsp;Disclosures</a>
+<a href="/accessibility-statement">Accessibility Statement</a>
+</div></div>
+      </div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+</div>
+
+    </div>
+<img src="http://media.msg.dotomi.com/w/tre?ad_id=62025&evt=32538&cat1=42674&cat2=42678" width=1 height=1 border=0>
+  </footer>
+    
+</div>
+
+  </div>
+
+    
+    <script src="/core/assets/vendor/jquery/jquery.min.js?v=3.4.1"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/data-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/form-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/labels-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/jquery-1-7-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/tabbable-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/unique-id-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/version-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/escape-selector-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/focusable-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/keycode-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/plugin-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/safe-active-element-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/safe-blur-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widget-min.js?v=1.12.1"></script>
+<script src="/modules/sharethis/js/sharethis.js?q2s400"></script>
+<script src="/modules/google_analytics/js/google_analytics.js?v=8.8.1"></script>
+<script src="/themes/animals/scripts/soundmanager2/script/soundmanager2-jsmin.js?v=1.0.x"></script>
+<script src="/themes/animals/scripts/soundmanager2_mp3-player-button.js?v=1.0.x"></script>
+<script src="/themes/animals/scripts/soundmanager2_animals_site_specific.js?v=1.0.x"></script>
+<script src="/themes/animals/scripts/mylist-conf.js?v=8.x-1.0"></script>
+<script src="/themes/animals/scripts/mylist/js/mylist-player.js?v=8.x-1.0"></script>
+<script src="/themes/animals/scripts/audioeye_snippet.js?v=1.0.x"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.0.8/fontfaceobserver.js"></script>
+<script src="/themes/animals/scripts/fontfaceobserver-check.js?v=8.x-1.0"></script>
+<script src="/themes/adaptivetheme/at_core/scripts/min/at.responsiveTables.min.js?v=8.8.1"></script>
+<script src="/core/assets/vendor/matchMedia/matchMedia.min.js?v=0.2.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>
+<script src="/themes/adaptivetheme/at_core/scripts/min/doubletaptogo.min.js?v=8.8.1"></script>
+<script src="/themes/adaptivetheme/at_core/scripts/min/at.responsiveMenus.min.js?v=8.8.1"></script>
+<script src="/core/modules/statistics/statistics.js?v=8.8.1"></script>
+<script src="/libraries/colorbox/jquery.colorbox-min.js?v=8.8.1"></script>
+<script src="/modules/colorbox/js/colorbox.js?v=8.8.1"></script>
+<script src="/modules/colorbox/styles/plain/colorbox_style.js?v=8.8.1"></script>
+<script src="https://ws.sharethis.com/button/buttons.js"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/form-reset-mixin-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/checkboxradio-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/controlgroup-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/button-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/mouse-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/ie-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/draggable-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/position-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/resizable-min.js?v=1.12.1"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/dialog-min.js?v=1.12.1"></script>
+<script src="/core/misc/progress.js?v=8.8.1"></script>
+<script src="/core/modules/responsive_image/js/responsive_image.ajax.js?v=8.8.1"></script>
+<script src="/core/misc/ajax.js?v=8.8.1"></script>
+<script src="/core/themes/stable/js/ajax.js?v=8.8.1"></script>
+<script src="/modules/form_placeholder/js/form_placeholder.js?v=8.8.1"></script>
+<script src="/themes/adaptivetheme/at_core/scripts/min/at.breakpoints.min.js?v=8.8.1"></script>
+<script src="/libraries/masonry/masonry.pkgd.min.js?v="></script>
+<script src="/libraries/imagesloaded/imagesloaded.pkgd.min.js?v="></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"dddcf39a1a","applicationID":"125884562","transactionName":"Y1ZWMhEEDxIAU0xbVlocdQUXDA4PTkBZVVxrUFUFCwA=","queueTime":0,"applicationTime":19,"atts":"TxFVRFkeHBw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

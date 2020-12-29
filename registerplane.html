@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto+Mono&display=swap" rel="stylesheet">
+	<title>registering ship</title>
+	<style >
+		body{
+			background-image: url("../project/image/plane.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 0px;
+			text-align: center;
+		}
+		div{
+			font-size: 1.3em;
+			color: white;
+			padding:10px;
+			font-family: 'Roboto Mono', monospace;
+			color:#facf5a;
+
+		}
+		.container1{
+			margin-top: 50px;
+			margin-left: 320px;
+			background-color: #000000;
+			opacity: 0.8;
+			width: 50%;
+			border: 1px solid ;
+			border-radius: 20px; 
+		}
+		input{
+			border:none;
+			border-radius: 10px;
+			text-align: center;
+		}
+		.words{
+			font-family: 'Fredoka One', cursive;
+			font-size: 1.5em;
+			margin-top: 10px;
+			color:#000000;
+
+		}
+		.submit{
+			height: 30px;
+			width: 30%;
+			border-radius: 20px;
+			background-color: #fffeb8;
+
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="words">
+		<a class="words">YOU CAN'T TELL THAT YOU AIN'T FLY
+			<br>-BE THE SUPER FLY-</a>
+	</div>
+	<div class="container1">
+		
+		<div class="registerform">
+			Name <input  type="text" placeholder="Username"><br>
+			Email <input type="email" placeholder="@email.com"><br>
+			Phone <input type="text" placeholder="+959-"><br>
+			<form action=""></form>
+			Deparature <input type="date" name="bday"><br>
+			Arrival <input type="date" name="bday"><br>
+			How many ticket do you want? <input type="number" name="quantity" min="1" max="15"><br>
+			Class <select>
+				<option>classA $800</option>
+				<option>classB $500</option>
+				<option>classC $400</option>
+			</select>
+			<br><br>
+			<input type="submit" class="submit">
+			<br>
+			<div class="agree">Agree the policy? <input type="radio" ></div>
+		</div>
+	</div>
+</body>
+</html>

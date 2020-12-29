@@ -1,0 +1,61 @@
+.nvi{
+	width: 100%;
+	height: 80px;
+	background-image:linear-gradient(to right, rgb(241, 39, 17), rgb(245, 175, 25));
+	padding: 10px;
+	display: block;
+}
+img{
+		width:100px;
+		height:80px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		
+}
+a{
+	text-decoration: none;
+	color: #f4fa9c;
+	font-size: 1.4em;
+	font-family: 'Kanit', sans-serif;
+	padding: 5px;
+}
+
+.bt{
+	
+	font-size: 1.2em;
+	width:200px;
+	height: 40px;
+	margin-top: -50px;
+	display: block;
+	text-align: center ;
+	
+
+}
+.Home{
+	margin-left: 300px;
+	margin-top: -60px;
+}
+.Gallery{
+	margin-left: 450px;
+	margin-top: -40px;
+}
+.Contact{
+	margin-left: 600px;
+	margin-top: -40px;
+}
+.icons{
+	margin-left: 85%;
+	margin-top: -60px;
+
+}
+
+.fab{
+	color: white;
+}
+a:hover{
+	color: #ffd615;
+}
+.fab:hover{
+	color:#22eaaa;
+}
